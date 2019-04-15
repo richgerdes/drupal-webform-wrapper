@@ -1,5 +1,5 @@
 {
-    "name": "ecs/drupal-webform-wrapper",
+    "name": "roygoldman/drupal-webform-wrapper",
     "description": "Provides links to drupal webform dependencies.",
     "type": "library",
     "authors": [
