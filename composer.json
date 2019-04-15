@@ -1,0 +1,122 @@
+{
+    "name": "ecs/drupal-webform-wrapper",
+    "description": "Provides links to drupal webform dependencies.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "OIT ESD Webmaster",
+            "email": "webmaster@oit.rutgers.edu"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "_webform": true,
+            "type": "package",
+            "package": {
+                "name": "ckeditor/autogrow",
+                "version": "4.7.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "ckeditor.autogrow"
+                },
+                "dist": {
+                    "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.10.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "_webform": true,
+            "type": "package",
+            "package": {
+                "name": "ckeditor/fakeobjects",
+                "version": "4.7.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "ckeditor.fakeobjects"
+                },
+                "dist": {
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.10.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "_webform": true,
+            "type": "package",
+            "package": {
+                "name": "ckeditor/image",
+                "version": "4.7.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "ckeditor.image"
+                },
+                "dist": {
+                    "url": "https://download.ckeditor.com/image/releases/image_4.10.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "_webform": true,
+            "type": "package",
+            "package": {
+                "name": "ckeditor/link",
+                "version": "4.7.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "ckeditor.link"
+                },
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.10.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        }
+    ],
+    "require": {
+        "drupal/webform": "~5",
+        "npm-asset/places.js": "^1.16",
+        "npm-asset/codemirror": "5.31.0",
+        "npm-asset/chosen-js": "^1.6",
+        "npm-asset/geocomplete": "1.7.0",
+        "npm-asset/icheck": "1.0.2 ",
+        "npm-asset/image-picker": "0.3.0",
+        "npm-asset/inputmask": "4.0.6",
+        "npm-asset/intl-tel-input": "15.0.1",
+        "npm-asset/jquery.hotkeys": "0.2.0",
+        "npm-asset/jquery.rateit": "1.1.1",
+        "npm-asset/jquery-text-counter": "0.8.0",
+        "npm-asset/timepicker": "1.11.12",
+        "npm-asset/jquery-toggles": "4.0.0",
+        "npm-asset/select2": "4.0.5",
+        "npm-asset/ckeditor-codemirror-plugin": "v1.17.3",
+        "npm-asset/progress-tracker": "1.4.0",
+        "npm-asset/signature_pad": "2.3.0",
+        "ckeditor/autogrow": "^4.10",
+        "ckeditor/fakeobjects": "^4.10",
+        "ckeditor/image": "^4.10",
+        "ckeditor/link": "^4.10",
+        "ckeditor/autogrow": "^4.10"
+    }
+}
