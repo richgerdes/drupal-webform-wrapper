@@ -22,7 +22,7 @@
             "type": "package",
             "package": {
                 "name": "ckeditor/autogrow",
-                "version": "4.7.2",
+                "version": "4.10.1",
                 "type": "drupal-library",
                 "extra": {
                     "installer-name": "ckeditor.autogrow"
@@ -41,7 +41,7 @@
             "type": "package",
             "package": {
                 "name": "ckeditor/fakeobjects",
-                "version": "4.7.2",
+                "version": "4.10.1",
                 "type": "drupal-library",
                 "extra": {
                     "installer-name": "ckeditor.fakeobjects"
@@ -60,7 +60,7 @@
             "type": "package",
             "package": {
                 "name": "ckeditor/image",
-                "version": "4.7.2",
+                "version": "4.10.1",
                 "type": "drupal-library",
                 "extra": {
                     "installer-name": "ckeditor.image"
@@ -79,7 +79,7 @@
             "type": "package",
             "package": {
                 "name": "ckeditor/link",
-                "version": "4.7.2",
+                "version": "4.10.1",
                 "type": "drupal-library",
                 "extra": {
                     "installer-name": "ckeditor.link"
