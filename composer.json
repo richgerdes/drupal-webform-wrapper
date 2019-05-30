@@ -95,10 +95,14 @@
         }
     ],
     "require": {
+        "ckeditor/autogrow": "^4.10",
+        "ckeditor/fakeobjects": "^4.10",
+        "ckeditor/image": "^4.10",
+        "ckeditor/link": "^4.10",
         "drupal/webform": "~5",
-        "npm-asset/places.js": "^1.16",
-        "npm-asset/codemirror": "5.31.0",
         "npm-asset/chosen-js": "^1.6",
+        "npm-asset/ckeditor-codemirror-plugin": "v1.17.3",
+        "npm-asset/codemirror": "5.31.0",
         "npm-asset/geocomplete": "1.7.0",
         "npm-asset/icheck": "1.0.2 ",
         "npm-asset/image-picker": "0.3.0",
@@ -107,16 +111,36 @@
         "npm-asset/jquery.hotkeys": "0.2.0",
         "npm-asset/jquery.rateit": "1.1.1",
         "npm-asset/jquery-text-counter": "0.8.0",
-        "npm-asset/timepicker": "1.11.12",
         "npm-asset/jquery-toggles": "4.0.0",
-        "npm-asset/select2": "4.0.5",
-        "npm-asset/ckeditor-codemirror-plugin": "v1.17.3",
+        "npm-asset/places.js": "^1.16",
         "npm-asset/progress-tracker": "1.4.0",
+        "npm-asset/select2": "4.0.5",
         "npm-asset/signature_pad": "2.3.0",
-        "ckeditor/autogrow": "^4.10",
-        "ckeditor/fakeobjects": "^4.10",
-        "ckeditor/image": "^4.10",
-        "ckeditor/link": "^4.10",
-        "ckeditor/autogrow": "^4.10"
+        "npm-asset/timepicker": "1.11.12"
+    },
+    "extra": {
+        "installer-types": ["npm-asset", "bower-asset"],
+        "installer-paths": {
+          "web/libraries/{$name}": [
+            "npm-asset/codemirror",
+            "npm-asset/jquery.rateit",
+            "npm-asset/progress-tracker",
+            "npm-asset/signature_pad"
+          ],
+          "web/libraries/jquery.{$name}": [
+            "npm-asset/geocomplete",
+            "npm-asset/icheck",
+            "npm-asset/image-picker",
+            "npm-asset/inputmask",
+            "npm-asset/intl-tel-input",
+            "npm-asset/select2",
+            "npm-asset/timepicker"
+          ],
+          "web/libraries/ckeditor.codemirror": ["npm-asset/ckeditor-codemirror-plugin"],
+          "web/libraries/jquery.word-and-character-counter": ["npm-asset/jquery-word-and-character-counter-plugin"],
+          "web/libraries/jquery-timepicker-addon": ["npm-asset/jquery-ui-timepicker-addon"],
+          "web/libraries/jquery.toggles": ["npm-asset/jquery-toggles"],
+          "web/libraries/chosen": ["npm-asset/chosen-js"]
+        }
     }
 }
