@@ -17,7 +17,7 @@ You will need to add the two following composer repositories:
 - Drupal 8 - https://packages.drupal.org/8 - Drupal 8 modules
 - Asset Packagist - https://asset-packagist.org - Mirror of NPM and Bower libraries
   for composer
-  
+
 You will also need to add the following custom packages. For package configuration,
 please view this projects `composer.json`.
 
@@ -48,6 +48,16 @@ your composer project to download the libraries and config.
 
 ```
 composer require roygoldman/drupal-webform-wrapper
+```
+
+### Advanced Usage
+
+By default the script will add new packages definitions but not wipe out old
+versions. You can specify the `--upstream` or `-u` argument to the script
+to replace existing package definitions instead of merging versions.
+
+```
+php drupal-webform-wrapper-setup.php --upstream
 ```
 
 ## Support

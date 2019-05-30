@@ -1,7 +1,16 @@
 #!/bin/php
 <?php
 
-$GIT_REFERENCE = $argv[1] ?? '8.x';
+$optind = null;
+$opts_short = 'u';
+$opts_long = ['upstream'];
+$options = getopt($opts_short, $opts_long, $optind);
+if (!isset($options['upstream']) && isset($options['u'])) {
+    $options['upstream'] = $options['u'];
+}
+$arguments = array_slice($argv, $optind);
+
+$GIT_REFERENCE = $arguments[1] ?? '8.x';
 $COMPOSER_JSON_URL = 'https://raw.githubusercontent.com/roygoldman/drupal-webform-wrapper/' . $GIT_REFERENCE . '/composer.json';
 
 function has_composer_repository($local_repo, $remote_url) {
@@ -63,7 +72,11 @@ foreach ($upstream_composer_config['repositories'] as $repository) {
         if ($key !== false) {
             $upstream_version = $repository['package']['version'];
             $local_definition = $local_repo['repositories'][$key];
-            if (isset($local_definition['package']['name'])) {
+            if (isset($options['upstream'])) {
+                // Don't attempt to merge versions.
+                $local_repo['repositories'][$key] = $repository;
+            }
+            else if (isset($local_definition['package']['name'])) {
                 // Simple package definiton. Verify version.
                 $local_version = $local_definition['package']['version'];
                 if ($local_version !== $upstream_version) {
